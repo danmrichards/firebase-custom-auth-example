@@ -61,7 +61,7 @@ func main() {
 
 		token, err := ac.VerifyIDToken(r.Context(), idToken)
 		if err != nil {
-			log.Fatalf("error verifying ID token: %v\n", err)
+			log.Printf("error verifying ID token: %v\n", err)
 			http.Error(w, "invalid token", http.StatusForbidden)
 			return
 		}
