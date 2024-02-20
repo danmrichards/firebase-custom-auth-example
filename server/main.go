@@ -91,8 +91,6 @@ func main() {
 			return
 		}
 
-		log.Printf("login request: %+v\n", req)
-
 		// Stupid authentication, but it's just an example.
 		if req.Email != "foo@bar.com" || req.Password != "password" {
 			http.Error(w, "invalid credentials", http.StatusUnauthorized)
